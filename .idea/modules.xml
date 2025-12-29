@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BridgeLabz.iml" filepath="$PROJECT_DIR$/.idea/BridgeLabz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/QaEng.iml" filepath="$PROJECT_DIR$/.idea/QaEng.iml" />
     </modules>
   </component>
 </project>

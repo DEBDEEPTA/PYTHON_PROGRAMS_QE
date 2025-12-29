@@ -110,6 +110,8 @@ def main():
     #var_kargs_eg(a=20,b=30,c=40,d=10)
     var_kargs_eg(name="Dev",age=23,active = True)
 
+# DECORATOR FUNCTION
+
 if __name__=="__main__":
     main()
 
