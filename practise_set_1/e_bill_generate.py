@@ -26,4 +26,4 @@ def e_calc(units):
 
 if __name__=="__main__":
     units_val = int(input("Enter Units\n"))
-    print(e_calc(units_val))
+    print(e_calc(units_val)
