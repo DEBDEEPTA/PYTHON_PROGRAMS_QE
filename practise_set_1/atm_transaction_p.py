@@ -16,6 +16,7 @@ def transaction_validator(bal,ammount_list):
 
      print(bal)
 
+
 if __name__ == "__main__":
 
     initial_bal = int(input("Enter Initial Bal\n"))
