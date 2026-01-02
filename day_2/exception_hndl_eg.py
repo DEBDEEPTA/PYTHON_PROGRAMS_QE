@@ -37,7 +37,7 @@ def specific_exception():
 
     """
         (note)
-             -> while handling different types of exceptions always go from specific type of exception
+             -> while handling different types of exceptions always go from most specific type of exception
                 to general exception
     """
     try:

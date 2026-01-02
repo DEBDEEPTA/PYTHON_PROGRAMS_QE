@@ -36,6 +36,7 @@ import  json
 #     json.dump(student_nested,file_obj)
 
 
+
 # ACESSING A JSON FILE & READING IT
 with open("sample_data.json", "r") as reader_obj:
     # LOADING DATA FROM JSON OBJECT
