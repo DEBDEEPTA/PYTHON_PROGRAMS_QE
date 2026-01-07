@@ -12,12 +12,12 @@
 
 ### _2._
 
-| Methods      | Descriptions           |
-|--------------|------------------------|
-| json.dump()  | write JSON to File     |
-| json.dumps() | Convert to JSON String |
-| json.load()  | Read JSON from file    |
-| json.loads   | Parse JSON String      |
+| Methods      | Descriptions                                       |
+|--------------|----------------------------------------------------|
+| json.dump()  | write JSON to File                                 |
+| json.dumps() | Convert to JSON String                             |
+| json.load()  | Read JSON from file     (demo.json ---> json/dict) |
+| json.loads   | Parse JSON String       (string --> json)          |
 
 ### _3._
     Python dict

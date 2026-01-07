@@ -5,7 +5,7 @@
     note -> best practise (open read file using "with" keyword
 """
 file_obj1 = open("sample.txt", 'r')  # open file in read mode
-file_obj1.close() #❗ If you don’t close a file:
+file_obj1.close() # If you don’t close a file:
                   # Memory leak
                   # File may not be saved properly
 file_obj2 = open("sample.txt", "rb") # opened in read & binary mode
