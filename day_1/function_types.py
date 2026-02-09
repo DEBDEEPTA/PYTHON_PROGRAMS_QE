@@ -97,6 +97,13 @@ def var_kargs_eg(**kwargs):
         for k,v in kwargs.items():
             print(f"{k} --> {v}")
 
+def  yield_func_counter():
+    count = 0
+
+    for i in range(5):
+        count += 1
+        yield count
+
 
 
 def main():
@@ -108,7 +115,13 @@ def main():
     # var_args_eg(10,20)
     # var_args_eg(10,20,30,40,50,60)
     #var_kargs_eg(a=20,b=30,c=40,d=10)
-    var_kargs_eg(name="Dev",age=23,active = True)
+    #var_kargs_eg(name="Dev",age=23,active = True)
+
+    generator_obj = yield_func_counter()
+    print(type(generator_obj))
+    print(next(generator_obj))
+    print(next(generator_obj))
+    print(next(generator_obj))
 
 # DECORATOR FUNCTION
 

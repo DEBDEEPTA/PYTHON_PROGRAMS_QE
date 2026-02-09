@@ -1,3 +1,13 @@
+## Acess modifiers
+| Access Level  | Declaration Syntax | Name Mangling Syntax   | Accessibility                          | Enforced by Python | Notes                    |
+| ------------- | ------------------ | ---------------------- | -------------------------------------- | ------------------ | ------------------------ |
+| **Public**    | `variable`         | ❌ Not applied          | Anywhere (inside & outside class)      | ❌ No               | Default access level     |
+| **Protected** | `_variable`        | ❌ Not applied          | Class, subclass, outside (discouraged) | ❌ No               | Convention only          |
+| **Private**   | `__variable`       | `_ClassName__variable` | Inside class only (direct)             | ⚠️ Partial         | Avoids accidental access |
+
+
+
+
 ## Key Difference Between Class (static) & Instance Variables
 | Feature                      | **Class Variable (static)** | **Instance Variable**      | 
 | ---------------------------- |-----------------------------| -------------------------- |

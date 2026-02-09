@@ -1,8 +1,8 @@
 import  numpy as np
 from numpy import dtype
 
-arr1 = np.arange(6, dtype=int)
-arr2 = arr1.reshape((3,2))
+arr1 = np.arange(1,13,1, dtype=int)
+arr2 = arr1.reshape((2,2,3))    # (2,2,3) --> total 2*2*3 = 12 elements should be present in the array which we want to reshape
 
 print(arr1) # [1,2,3,4,5]
 print(arr2)

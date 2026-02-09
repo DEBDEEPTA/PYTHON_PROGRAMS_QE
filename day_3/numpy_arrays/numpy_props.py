@@ -77,7 +77,7 @@ def ndarr_props():
     """
         SHAPE IS A TUPLE 
             -> where each value represents the number of elements along a particular axis.
-        CALCULATING NUMBER OF DIMENSIONS
+        CALCULATING SHAPE
             -> array.shape == (axis0_size, axis1_size, axis2_size, ...)
         (note)
             -> Shape should be Homogeneous

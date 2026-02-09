@@ -13,16 +13,16 @@
 | `       | `                            | OR |
 | `\`     | Escape character             |    |
 ## Predefined Character Sets
-| Pattern | Meaning                   |
-| ------- | ------------------------- |
-| `\d`    | Digit (0–9)               |
-| `\D`    | Not digit                 |
-| `\w`    | Word char (a-z A-Z 0-9 _) |
-| `\W`    | Not word                  |
-| `\s`    | Whitespace                |
-| `\S`    | Not whitespace            |
-| `\b`    | Word boundary             |
-| `\B`    | Not word boundary         |
+| Pattern | Meaning                                   |
+| ------- |-------------------------------------------|
+| `\d`    | Digit (0–9)                               |
+| `\D`    | Not digit                                 |
+| `\w`    | Word char (a-z A-Z 0-9 _)                 |
+| `\W`    | Not word (use to count special character) |
+| `\s`    | Whitespace                                |
+| `\S`    | Not whitespace                            |
+| `\b`    | Word boundary                             |
+| `\B`    | Not word boundary                         |
 ## Quantifiers (Used For Repetition)
 | Quantifier | Meaning   |
 | ---------- | --------- |
@@ -72,8 +72,54 @@
 
 
 
-## Match Objects
-    When search() or match() succeeds:
+## Group Objects
+    When you use re.search(), re.match(), or re.finditer(), you get a Match object. ->
+
+    In Python, groups are created using parentheses ( ) in a regex pattern.
+    When a match is found, Python returns a Match object, which contains group data.
+    
+   ```  Pattern:  (\d{4})-(\d{2})-(\d{2})
+        String:   2025-01-19
+        Groups:   [2025] [01] [19]
+   ```
+   ```
+        pattern = r"(\w+)\s(\w+)"
+        text = "Hello World"
+        
+        m = re.search(pattern, text)
+        
+        print(m.group(0))   # Hello World
+        print(m.group(1))   # Hello
+        print(m.group(2))   # World
+        print(m.groups())   # ('Hello', 'World')
+   ```
+### Named Groups (?p<group_name>.....)
+```
+        pattern = r"(?P<user>\w+)@(?P<domain>\w+)\.(?P<tld>\w+)"
+        email = "admin@gmail.com"
+        
+        m = re.search(pattern, email)
+        
+        print(m.group("user"))     # admin
+        print(m.group("domain"))   # gmail
+        print(m.groupdict())
+        
+        #o/p -> {'user': 'admin', 'domain': 'gmail', 'tld': 'com'}
+        
+```
+### Group Position Methods
+```
+        pattern = r"(\d+)"
+        text = "Price: 450"
+        
+        m = re.search(pattern, text)
+        
+        print(m.start(1))  # 7
+        print(m.end(1))    # 10
+        print(m.span(1))   # (7, 10)
+```
+
+
 | Method        | Meaning                                                                |
 | ------------- |------------------------------------------------------------------------|
 | `group()`     | matched text                                                           |
